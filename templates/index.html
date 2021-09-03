@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title> Pneumonia Detection System</title>
+
+        <style>
+
+          
+
+        body 	{
+            font-size:20px;
+            color: white;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            animation: animate 10s ease-in infinite;
+          }
+        .dets{
+          padding: 55px;
+          width: auto;
+          height: auto;
+          opacity: 0.8;
+          background-size:stretch;
+        }
+        .details{
+          position: absolute;
+          left: 50%;
+          top:40%;
+          text-align: center;
+          transform: translate(-50%, -50%);
+        }
+        @keyframes animate {
+        0%, 100%{
+          background-image: url('image1.jpeg');
+        }
+        25%{
+          background-image: url('image2.jpeg');
+        }
+        50%{
+          background-image: url('image3.jpeg');
+        }
+        75%{
+          background-image: url('image4.jpeg');
+        }
+      }
+        </style>
+    </head>
+    <body>
+
+        <div class="topnav" style="text-align: right;">
+            <a class="active" href="home.html" style="color:white;">Home</a>
+            <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/media-resources/news" style="color:white;">News</a> 
+        </div>
+          <div class="dets">
+            <div class="details">
+          <h1> <i>Pneumonia Detection</i></h1>
+          <h4> <i>Bringing Convinience to Your Devices, Input a Scan of Your RIB-CAGE area to Diagnose Your Pneumonia State.</i></h4>
+          
+          <div class="opt">
+          
+          <title>Upload X-ray Scan for Diagnosis</title>
+          <h3 >Upload Here</h3>
+          
+          <form method=post enctype=multipart/form-data>
+            <input class="form-control" type="file" name="file">
+            <input class="btn btn-primary mt-3" type="submit" value="Predict">
+            <h3> Prediction : {{prediction}}</h3> 
+          
+          </form>
+          </div>
+          </div>
+          </div>
+    </body>
+    <footer>
+
+    </footer>>
+</html>
